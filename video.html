@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Page</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            background: #000;
+            font-family: Arial, sans-serif;
+            color: #fff;
+            text-align: center;
+            position: relative; /* Cần để tạo nền cho dòng chữ */
+        }
+
+        /* Dòng chữ "CLICK THE SCREEN" */
+        .click-message {
+            position: absolute;
+            top: 20px; /* Điều chỉnh vị trí dọc */
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 36px;
+            font-weight: bold;
+            color: #fff;
+            z-index: 10;
+        }
+
+        .video-container {
+            position: relative;
+            width: 80%;
+            max-width: 600px;
+            border: 5px solid #fff;
+            border-radius: 10px;
+            padding: 10px;
+            background: #000;
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .message {
+            font-size: 24px;
+            margin-bottom: 20px;
+            font-weight: bold;
+            display: none; /* Ẩn thông điệp ban đầu */
+        }
+
+        .continue-button {
+            padding: 10px 20px;
+            background: #fff;
+            color: #000;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            transition: background 0.2s, transform 0.2s;
+        }
+
+        .continue-button:hover {
+            background: #6a11cb;
+            color: #fff;
+            transform: scale(1.1);
+        }
+
+        .continue-button:active {
+            transform: scale(0.95);
+        }
+    </style>
+    <script>
+        function showMessage() {
+            document.querySelector('.message').style.display = 'block';
+        }
+
+        function redirectToNextPage() {
+            window.location.href = 'nggyu.html';
+        }
+    </script>
+</head>
+<body>
+    <div class="click-message">CLICK THE SCREEN</div>
+    <div class="video-container">
+        <div class="message">You just got hutcherson'ed for the last time in 2024</div>
+        <video controls autoplay onplay="showMessage()">
+            <source src="JoshHutchersonWhistle.mp4" type="video/mp4">
+        </video>
+        <button class="continue-button" onclick="redirectToNextPage()">Continue</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Play Button</title>
+    <style>
+        @font-face {
+            font-family: 'HARMONI';
+            src: url('HARMONI.ttf') format('truetype');
+        }
+
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            font-family: Arial, sans-serif;
+        }
+
+        .play-button {
+            width: auto;
+            height: auto;
+            padding: 20px 40px;
+            background: #fff;
+            color: #6a11cb;
+            border-radius: 10px;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            cursor: pointer;
+            font-family: 'HARMONI', Arial, sans-serif;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .play-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .play-button:active {
+            transform: scale(0.95);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+    <script>
+        function redirectToVideo() {
+            window.location.href = 'video.html';
+        }
+    </script>
+</head>
+<body>
+    <div class="play-button" onclick="redirectToVideo()">Happy New Year!</div>
+</body>
+</html>
